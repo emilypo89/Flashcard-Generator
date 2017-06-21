@@ -1,40 +1,52 @@
 var inquirer = require("inquirer");
 var questionArr = [];
-var count = 1;
+var answerArr = [];
+var count = 0;
 
 var BasicCard = function (question, answer) {
 	this.question = question;
 	this.answer = answer;
-	this.questionPush = function() {
+	this.questionAnswerPush = function() {
 		questionArr.push(this.question);
+		answerArr.push(this.answer);
 	}
 }
 
 
-var question1 = new BasicCard("Who was the first president?", "George Washington");
-var question2 = new BasicCard("What is the US capital?", "DC");
-var question3 = new BasicCard("")
-console.log(question1.answer);
+var question1 = new BasicCard("What kind of threading does Node.js use?", "asynchronous");
+var question2 = new BasicCard("What does HTML stand for?", "hypertext markup language");
+var question3 = new BasicCard("What does 'fs' stand for?", "file system");
+var question4 = new BasicCard("What function do you use to request information from an API?", "ajax");
+var question5 = new BasicCard("What are the nouns of programming?", "variables");
+var question6 = new BasicCard("What takes a user's requests and then sends information back?", "server");
+var question7 = new BasicCard("What is required when you define or access JQuery?", "$");
+var question8 = new BasicCard("What does CSS stand for?", "cascading style sheets");
+var question9 = new BasicCard("What does JSON stand for?", "javascript object notation");
+var question10 = new BasicCard("Firebase is a type of?", "database");
 
-// var questionDis= this.question;
-// console.log(questionDis);
-// // console.log(JSON.stringify(questionArr));
+question1.questionAnswerPush();
+question2.questionAnswerPush();
+question3.questionAnswerPush();
+question4.questionAnswerPush();
+question5.questionAnswerPush();
+question6.questionAnswerPush();
+question7.questionAnswerPush();
+question8.questionAnswerPush();
+question9.questionAnswerPush();
+question10.questionAnswerPush();
 
-// var correctAnswer = this.answer;
 
-BasicCard.prototype.displayQuestion = function() {
-  console.log(this.question);
+console.log("Test your knowledge about Coding!!!");
+console.log("-----------------------------------");
+
+var displayQuestion = function() {
+		console.log(questionArr[count]);
 };
-	
-// console.log(question[count]);
+
 var askQuestion = function() {
-// 	var correctAnswer = question[count].answer;
-// console.log(question[count].answer);
 	if (count < 10){
-		for (var i = 0; i < questionArr.length - 1; i >= 0; i--) {
-			Things[i]
-		}
-		question1.displayQuestion();
+
+		displayQuestion();
 		inquirer.prompt([
 		  {
 		    type: "input",
@@ -42,60 +54,23 @@ var askQuestion = function() {
 		    name: "answer"
 		  }
 		]).then(function(user) {
-		  console.log(question1.answer);
-		  count++;
-		  if (user.answer == question1.answer) {
+		  
+		  if (user.answer == answerArr[count]) {
 		    console.log("You are correct!");
+		    console.log("----------------");
 		  }
 		  else {
-		    console.log("You are incorrect!" + question1.answer + " is the correct answer.");
+		    console.log("You are incorrect!" + answerArr[count] + " is the correct answer.");
+		    console.log("-----------------------------------------------------------------");
 		  }
+		  count++;
 		  askQuestion();
 		});
 	}
 	else {
-		console.log("You answered them all!");
+		console.log("You answered them all, good job!");
+		console.log("----------------------");
 	}
 }
 askQuestion();
 
-// var askQuestion = function() {
-//   // if statement to ensure that our questions are only asked five times
-//   if (count < 10) {
-//     // runs inquirer and asks the user a series of questions whose replies are
-//     // stored within the variable answers inside of the .then statement
-//     question1.displayQuestion();
-//     inquirer.prompt([
-// 		  {
-// 		    type: "input",
-// 		    message: "Answer: ",
-// 		    name: "answer"
-// 		  }
-//     ]).then(function(user) {
-//     		console.log(correctAnswer)
-// 			  if (user.answer == correctAnswer) {
-// 			    console.log("You are correct!");
-// 			  }
-// 			  else {
-// 			    console.log("You are incorrect!" + correctAnswer + " is the correct answer.");
-// 			  }
-      
-//       count++;
-//       // run the askquestion function again so as to either end the loop or ask the questions again
-//       askQuestion(question2);
-//     });
-//     // else statement which prints "all questions asked" to the console
-//     // when the code has been run five times
-//   }
-//   else {
-//     console.log("All questions asked");
-//   }
-// };
-
-// // call askquestion to run our code
-// askQuestion();
-
-
-
-
-// // question1.userInput();
