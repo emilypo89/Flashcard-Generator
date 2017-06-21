@@ -2,14 +2,16 @@ var inquirer = require("inquirer");
 var questionArr = [];
 var answerArr = [];
 var count = 0;
+var correctAnswers = 0;
+var incorrectAnswers = 0;
 
 // constructive function for the BasicCard questions and answers
-var BasicCard = function (question, answer) {
-	this.question = question;
-	this.answer = answer;
+var BasicCard = function (front, back) {
+	this.front = front;
+	this.back = back;
 	this.questionAnswerPush = function() {
-		questionArr.push(this.question);
-		answerArr.push(this.answer);
+		questionArr.push(this.front);
+		answerArr.push(this.back);
 	}
 }
 
@@ -60,13 +62,15 @@ var askQuestion = function() {
 		  }
 		]).then(function(user) {
 		  // checking the user input to the correct answer
-		  if (user.answer == answerArr[count]) {
+		  if (user.answer.toLowerCase() == answerArr[count].toLowerCase()) {
 		    console.log("You are correct!");
 		    console.log("----------------");
+		    correctAnswers++;
 		  }
 		  else {
 		    console.log("You are incorrect!" + answerArr[count] + " is the correct answer.");
 		    console.log("-----------------------------------------------------------------");
+		    incorrectAnswers++;
 		  }
 		  count++;
 		  // asking the next question
@@ -76,7 +80,10 @@ var askQuestion = function() {
 	else {
 		console.log("You answered them all, good job!");
 		console.log("----------------------");
+		console.log("You answered " + correctAnswers + " questions correctly!");
+		console.log("You answered " + incorrectAnswers + " questions incorrectly!");
 	}
 }
-// calling function to beginaskQuestion();
+// calling function to begin
+askQuestion();
 

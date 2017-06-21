@@ -9,7 +9,7 @@
 	},
 	{
 		"text": "'fs' stands for file system.",
-		"cloze": "'fs'"
+		"cloze": "fs"
 	},
 	{
 		"text": "An ajax function is used to request information from an API.",
