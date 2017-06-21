@@ -1,0 +1,42 @@
+[
+	{
+		"text": "Node.js uses asynchronous threading.",
+		"cloze": "asynchronous"
+	},
+	{
+		"text": "HTML stands for hypertext markup language.",
+		"cloze": "hypertext"
+	},
+	{
+		"text": "'fs' stands for file system.",
+		"cloze": "'fs'"
+	},
+	{
+		"text": "An ajax function is used to request information from an API.",
+		"cloze": "API"
+	},
+	{
+		"text": "Variables are the nouns of programming.",
+		"cloze": "nouns"
+	},
+	{
+		"text": "A server takes a user's requests and then sends information back.",
+		"cloze": "server"
+	},
+	{
+		"text": "'$' is required when you define or access JQuery.",
+		"cloze": "JQuery"
+	},
+	{
+		"text":"CSS stands for cascading style sheets.",
+		"cloze": "cascading"
+	},
+	{
+		"text": "JSON stands for javascript object notation.",
+		"cloze": "notation"
+	},
+	{
+		"text": "Firebase is a type of database.",
+		"cloze": "database"
+	}
+]
