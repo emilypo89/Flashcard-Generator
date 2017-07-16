@@ -1,0 +1,23 @@
+{
+  "name": "flashcard-generator",
+  "version": "1.0.0",
+  "description": "This is a command line Node application that generates flashcards in two ways.",
+  "main": "ClozeCard.js",
+  "dependencies": {
+    "inquirer": "^3.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilypo89/Flashcard-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilypo89/Flashcard-Generator/issues"
+  },
+  "homepage": "https://github.com/emilypo89/Flashcard-Generator#readme"
+}
